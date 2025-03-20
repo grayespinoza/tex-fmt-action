@@ -1,0 +1,19 @@
+name: tex-fmt
+description: GitHub Action to run tex-fmt, a LaTeX formatter
+author: Gray Espinoza
+
+branding:
+  icon: align-left
+  color: black
+
+inputs:
+  token:
+    description: The GITHUB_SECRET token
+    required: true
+  args:
+    description: CLI arguments to pass to tex-fmt
+    required: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
