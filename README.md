@@ -15,16 +15,16 @@ jobs:
       contents: write
     steps:
     - name: Checkout
-      uses: actions/checkout@v4.2.2
+      uses: actions/checkout@main
       with:
         ref: ${{ github.head_ref }}
     - name: Run tex-fmt
-      uses: grayespinoza/tex-fmt-action@stable
+      uses: grayespinoza/tex-fmt-action@main
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         args: .
     - name: Push
-      uses: stefanzweifel/git-auto-commit-action@v5
+      uses: stefanzweifel/git-auto-commit-action@master
       with:
         commit_message: "Formatted using tex-fmt"
 ```
