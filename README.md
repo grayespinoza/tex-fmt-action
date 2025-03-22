@@ -21,8 +21,7 @@ jobs:
     - name: Run tex-fmt
       uses: grayespinoza/tex-fmt-action@main
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        args: .
+        args: --check
     - name: Push
       uses: stefanzweifel/git-auto-commit-action@master
       with:

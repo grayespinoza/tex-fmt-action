@@ -7,12 +7,9 @@ branding:
   color: black
 
 inputs:
-  token:
-    description: The GITHUB_SECRET token
-    required: true
   args:
     description: CLI arguments to pass to tex-fmt
-    required: true
+    required: false
 
 runs:
   using: "docker"
