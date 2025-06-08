@@ -7,7 +7,7 @@ GitHub Action to run [tex-fmt](https://github.com/WGUNDERWOOD/tex-fmt), a LaTeX 
 3. Commit and push `cd.yml`
 
 ### Examples
-The following formats all `.tex`, `.bib`, `.cls`, and `.sty` files in the repository on pushes, then pushes the changes.
+The following formats all `.tex`, `.bib`, `.cls`, and `.sty` files in branch `main` on pushes, then pushes the changes.
 `.github/workflows/cd.yml`
 ```yml
 name: CD
