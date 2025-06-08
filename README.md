@@ -2,18 +2,21 @@
 GitHub Action to run [tex-fmt](https://github.com/WGUNDERWOOD/tex-fmt), a LaTeX formatter.
 
 ## Usage
-1. Create `.github/workflows/tex-fmt.yml`
-2. Configure `tex-fmt.yml` ([see examples](#examples))
-3. Commit and push `tex-fmt.yml`
+1. Create `.github/workflows/cd.yml`
+2. Configure `cd.yml`
+3. Commit and push `cd.yml`
 
 ### Examples
-The following formats all `.tex`, `.bib`, `.cls`, and `.sty` files in the repository on pushes and pull requests, then pushes the changes.
+The following formats all `.tex`, `.bib`, `.cls`, and `.sty` files in the repository on pushes, then pushes the changes.
+`.github/workflows/cd.yml`
 ```yml
-name: tex-fmt
-on: [push, pull_request]
+name: CD
+on:
+  push:
+    branches: main
 
 jobs:
-  format:
+  tex-fmt:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -27,7 +30,7 @@ jobs:
     - name: Push
       uses: stefanzweifel/git-auto-commit-action@master
       with:
-        commit_message: "Formatted using tex-fmt"
+        commit_message: "style: format using tex-fmt"
 ```
 
 ## Reporting Issues
