@@ -1,11 +1,10 @@
+---
 name: tex-fmt
 description: GitHub Action to run tex-fmt, a LaTeX formatter
 author: Gray Espinoza
-
 branding:
   icon: align-left
   color: black
-
 inputs:
   opts:
     description: CLI options to pass to tex-fmt
@@ -14,7 +13,6 @@ inputs:
     description: input files/directories to pass to tex-fmt
     required: false
     default: .
-
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: docker
+  image: Dockerfile
